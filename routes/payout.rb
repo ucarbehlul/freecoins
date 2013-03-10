@@ -29,7 +29,6 @@ post '/payout' do
   request_object = {  :password => wallet_pass,
     :recipients    => recipients }
 
-  puts "Paid out with blockchain.info!"
   JSON.parse(Nestful.get(url, :params => request_object))
 
   return { :success => true }.to_json

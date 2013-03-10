@@ -1,24 +1,8 @@
 # encoding: UTF-8
 
-def get_balance
-  wallet_pass = settings.wallet_pass
-  wallet_id = settings.wallet_id
-
-  url = "http://blockchain.info/merchant/#{wallet_id}/balance"
-  request_object = { :password => wallet_pass }
-
-  begin
-    body = Nestful.get(url, :params => request_object)
-  rescue
-    return "ERROR"
-  end
-
-  parsed = JSON.parse body
-
-  amount = parsed["balance"].to_i * 0.000_000_01
-  return amount
-end
-
+# The get_balance method is defined in helpers/balance. It
+# gives us the current balance of the faucet for displaying
+# in the sidebar. The session_id is used for the captcha.
 get '/' do
   @balance = get_balance
   @session_id = SecureRandom.uuid

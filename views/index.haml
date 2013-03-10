@@ -1,0 +1,43 @@
+!!!5
+%head
+  = partial :head
+%body
+  = partial :navbar
+  .container#main-container
+    .row
+      .span4
+        %h1 What is this?
+        %p
+          Like the title says, it's a free bitcoin site! Simply put in the
+          CAPTCHA text and your bitcoin address and go! This is meant for those
+          just starting out with Bitcoin so that they can try it out for themselves.
+          I was frustrated with the lack of Bitcoin faucet sites like this
+          so I decided to make my own, enjoy!
+        %h4 The current faucet balance is BTC#{@balance}.
+        = partial :anonads1
+      .span8
+        %form#bitcoin-form.well.form-horizontal(method='post')
+          .control-group
+            .controls
+              %a.thumbnail#captcha-thumbnail
+                %img#captcha-image{ :src => "http://captchator.com/captcha/image/#{@session_id}",
+                                    :data => { :session_id => @session_id }}
+          .control-group
+            %label.control-label(for='captcha-input') Enter CAPTCHA Text:
+            .controls
+              #captcha-input-container
+                %input.span2#captcha-input(name='captcha_text' type='text')
+          .control-group
+            %label.control-label(for='address-input') Enter Bitcoin Address:
+            .controls
+              #address-input-container
+                %input.span4#address-input(type='text' name='address')
+          #alert-container
+          .form-actions
+            %button.btn.btn-primary#form-submit Submit
+      .row
+        .span4
+          = partial :coinurl
+        .span4
+          = partial :anonads2
+      = partial :footer

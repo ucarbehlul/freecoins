@@ -1,0 +1,20 @@
+!!!5
+%head
+  = partial :head
+  %script(src='/js/graphs.js')
+%body
+  = partial :navbar
+  .container#main-container
+  .row
+    .span4
+      = partial :anonads1
+    .span8
+      %ul.thumbnails
+        %li.span8
+          .thumbnail#graph-container
+            #payout-graph
+  .row
+    .span4.offset4
+      = partial :coinurl
+    .span4
+      = partial :anonads2

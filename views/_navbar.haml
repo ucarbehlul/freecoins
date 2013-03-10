@@ -1,0 +1,12 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.brand(href='/') FreeCoins
+      %ul.nav
+        %li
+          %a(href='/faq') FAQ
+        %li
+          %a(href='/graphs') Graphs
+      .pull-right
+        %p.navbar-text
+          Please donate to keep the faucet running! #{settings.donation_address}

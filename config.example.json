@@ -1,0 +1,10 @@
+{
+  // This key will be used to send payouts. Payouts are sent
+  // by POSTing /payout with the secret paramater set to this
+  // key.
+  "payout_key": "anySecretKeyHere",
+  "wallet_id": "Blockchain.info wallet ID",
+  "wallet_pass": "blockchain.info wallet password",
+  "donation_address": "the address you want to use for donations",
+  "payout_amount": 0.00005
+}

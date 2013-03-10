@@ -1,0 +1,18 @@
+!!!5
+%head
+  = partial :head
+%body
+  = partial :navbar
+  .container#main-container
+    .row
+      .span5
+        = partial :anonads1
+      .span7
+        %h1 FAQ
+        = content :faq
+    .row
+      .span4.offset5
+        = partial :anonads2
+      .span3
+        = partial :coinurl
+    = partial :footer

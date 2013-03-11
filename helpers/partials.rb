@@ -1,3 +1,12 @@
+# This inserts a partial into a HAML document.
+#
+# It's used like:
+#
+# = partial :partialname
+#
+# It loads the partial from views/_partialname.haml. The underscore
+# is required. Most of the views have this used in them,
+# so those can be used as examples.
 module Haml::Helpers
   def partial(template, *args)
     template_array = template.to_s.split('/')

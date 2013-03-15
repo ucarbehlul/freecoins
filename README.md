@@ -8,3 +8,16 @@ references to them) or changing them to reflect your own ads.
 
 Attribution to this source would be greatly appreciated if you use this as your
 own faucet.
+
+# Setting up on Heroku
+
+This can be done entirely free, that's how I run it. Here's how.
+
+1.  Set up a new Heroku site.
+2.  Set up a cleardb:ignite instance. (The only free one, sorta limited, but
+    it's worked so far for me.
+3.  Make sure Heroku's DATABASE_URL is set to whatever ClearDB's URL is.
+4.  Deploy!
+
+If you want automatic payouts, set up a cron job somewhere that runs
+`curl -F secret=yoursecret http://yourapp.herokuapp.com/payout`

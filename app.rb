@@ -9,6 +9,7 @@ require 'nestful'
 require 'letters'
 require 'time_diff'
 require 'maruku'
+require 'bitcoind'
 
 configure do
   enable :sessions
@@ -22,7 +23,7 @@ configure do
   # their models are updated.
   DataMapper.auto_migrate!
   DataMapper.auto_upgrade!
-
+  
   # Here we read in the config file and parse the JSON from it.
   config = JSON.parse(File.read("config.json"))
 

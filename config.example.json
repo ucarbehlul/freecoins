@@ -6,5 +6,7 @@
   "wallet_id": "Blockchain.info wallet ID",
   "wallet_pass": "blockchain.info wallet password",
   "donation_address": "the address you want to use for donations",
-  "payout_amount": 0.00005
+  "payout_amount": 0.00005,
+  'rpcuser' : 'rpcuser',
+  'rpcpass' : 'rpcpass'
 }

@@ -1,5 +1,6 @@
-PATH
-  remote: ../bitcoind/
+GIT
+  remote: https://github.com/ucarbehlul/bitcoind.git
+  revision: 26859f24c3dc1970b36caa4e378081c231bd65b9
   specs:
     bitcoind (0.1.0)
       activesupport (~> 3.0)

@@ -4,10 +4,10 @@
 
 // This function is run once the transaction goes through successfully
 // and shows a message confirming it.
-var success_function = function() {//{{{
+var success_function = function(data) {//{{{
   alert_html = "<div class='alert alert-success'>" +
     "<button type='button' class='close' data-dismiss='alert'>&times;</button>" +
-    "Your transaction was successful, payouts are sent once every day." +
+    data.msg +
     "</div>";
   $('#alert-container').html(alert_html);
 }//}}}
@@ -15,7 +15,7 @@ var success_function = function() {//{{{
 // on what the type of error might be.
 var error_functions = {//{{{
   // This one is run if the bitcoin address has been used twice.
-  bad_addr: function() {//{{{
+  bad_addr: function(data) {//{{{
     alert_html = "<div class='alert alert-error'>" +
       "<button type='button' class='close' data-dismiss='alert'>&times;</button>" +
       "Your Bitcoin address has already been used." +
@@ -24,7 +24,7 @@ var error_functions = {//{{{
   },//}}}
   // And this one if the IP address has tried submitting a transaction
   // twice
-  bad_ip: function() {//{{{
+  bad_ip: function(data) {//{{{
     alert_html = "<div class='alert alert-error'>" +
       "<button type='button' class='close' data-dismiss='alert'>&times;</button>" +
       "A request with this IP address has already been sent." +
@@ -81,10 +81,10 @@ var sendCoins = function(address) {//{{{
       if(data.success) {
         $('span#address-spinner').html('<i class="icon-ok"></i>');
         // If everything was successful, run the success function.
-        success_function();
+        success_function(data);
       } else {
         // If there was an error, run the respective error function.
-        error_functions[data.error]();
+        error_functions[data.error](data);
         $('span#address-spinner').html('<i class="icon-remove"></i>');
       }
     }

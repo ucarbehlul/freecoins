@@ -7,6 +7,9 @@
   "wallet_pass": "blockchain.info wallet password",
   "donation_address": "the address you want to use for donations",
   "payout_amount": 0.00005,
+  "minwait" : 3600, //every hour
   'rpcuser' : 'rpcuser',
-  'rpcpass' : 'rpcpass'
+  'rpcpass' : 'rpcpass',
+  "rpchost" : "localhost",
+  "rpcport" : "51683"
 }

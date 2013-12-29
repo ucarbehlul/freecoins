@@ -25,13 +25,14 @@ post '/send' do
   # invalid.
   if !same_address.nil?
     same_address_difference = Time.diff(same_address.timestamp, current_date)
-    if same_address_difference[:week] < 1
+    puts same_address_difference[:second], settings.minwait
+    if same_address_difference[:second] < settings.minwait
       return {  :success => false,
         :error   => "bad_addr" }.to_json
     end
   elsif !same_ip.nil?
     same_ip_difference = Time.diff(same_ip.timestamp, current_date)
-    if same_ip_difference[:week] < 1
+    if same_ip_difference[:second] < settings.minwait
       return {  :success => false,
         :error   => "bad_ip" }.to_json
     end
@@ -44,5 +45,6 @@ post '/send' do
     :address => address,
     :timestamp => Time.now).o
 
-    return { :success => true }.to_json
+    return { :success => true, 
+        :msg => "Your transaction was successful. Payouts are sent every #{settings.minwait.to_f/3600} hours."  }.to_json
 end

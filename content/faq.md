@@ -1,18 +1,17 @@
 
 Q: How much does this pay?
 
-A: I've decided on BTC0.00005. This is subject to change.
+A: This depends on the current decision and market rate.
 
 Q: How can I donate to the faucet?
 
-A:  You can donate to the faucet's bitcoin address:
-`1M4YQYJ5ssXdSf3wjyNAnP3qZeCBfq6qvc`
+A:  You can donate to the faucet's TRK address.
 
 Q: Hey! I never got my payment!
 
 A: This could be for one of two reasons:
 
-1. Just wait a while! Payouts are sent every day, if it's been
+1. Just wait a while! Payouts are sent periodically, if it's been
 more than a day, it might be...
 
 2. We're out of money! The faucet might have run out of money.
@@ -23,8 +22,5 @@ current amount of money in the faucet.
 
 Q: Why are you doing this? This seems like a scam.
 
-A: I was frustrated at the lack of (working) Bitcoin faucet sites, so I decided
-to make one. Aside from that, there is no way this is a scam. All that you're
-giving to the site is your Bitcoin address, nothing else. That Bitcoin address
-can *only* be used to give you Bitcoins. There is no way for this site -- or any
-other -- to use it to get access to your Bitcoin wallet.
+A: We don't require an email address or phone number. How can this
+be scam? 
